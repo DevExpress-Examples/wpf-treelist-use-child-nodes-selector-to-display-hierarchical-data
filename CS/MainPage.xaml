@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="HierarchicalDataBinding.SL.MainPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+             xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+             xmlns:local="clr-namespace:HierarchicalDataBinding"
+             mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="400">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <local:ViewModel x:Key="viewModel" />
+        </ResourceDictionary>
+    </UserControl.Resources>
+        <Grid x:Name="LayoutRoot" Background="White">
+        <dxg:TreeListControl x:Name="treeList" ItemsSource="{Binding DataItems}" DataContext="{StaticResource viewModel}">
+            <dxg:TreeListControl.Resources>
+                <local:CustomChildrenSelector x:Key="childrenSelector"/>
+            </dxg:TreeListControl.Resources>
+            <dxg:TreeListControl.Columns>
+                <dxg:TreeListColumn FieldName="Name" AllowSorting="True" />
+                <dxg:TreeListColumn FieldName="Executor" AllowSorting="True" />
+                <dxg:TreeListColumn FieldName="State" AllowSorting="True" />
+            </dxg:TreeListControl.Columns>
+            <dxg:TreeListControl.View>
+                <dxg:TreeListView x:Name="view" TreeDerivationMode="ChildNodesSelector"
+                                          ChildNodesSelector="{StaticResource childrenSelector}" />
+            </dxg:TreeListControl.View>
+        </dxg:TreeListControl>
+        </Grid>
+</UserControl>
