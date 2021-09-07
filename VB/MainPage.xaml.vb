@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Net
@@ -14,6 +13,7 @@ Imports System.Windows.Shapes
 Namespace HierarchicalDataBinding.SL
 	Partial Public Class MainPage
 		Inherits UserControl
+
 		Public Sub New()
 			InitializeComponent()
 		End Sub
