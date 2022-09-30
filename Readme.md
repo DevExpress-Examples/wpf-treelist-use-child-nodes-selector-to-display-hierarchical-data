@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# WPF Tree List - Use the Child Nodes Selector to Create a Hierarchical Data Structure
+# WPF Tree List - Use the Child Nodes Selector to Display Hierarchical Data
 
 This example displays the hierarchical data structure that contains different object types. If all objects have the same field that contains child nodes, use the [Child Nodes Path](https://github.com/DevExpress-Examples/wpf-treelist-implement-childnodespath) technique.
 
