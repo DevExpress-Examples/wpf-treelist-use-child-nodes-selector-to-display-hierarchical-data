@@ -8,8 +8,6 @@
 
 * [ChildNodesSelector.cs](./CS/ChildNodesSelector.cs) (VB: [ChildNodesSelector.vb](./VB/ChildNodesSelector.vb))
 * [Data.cs](./CS/Data/Data.cs) (VB: [Data.vb](./VB/Data/Data.vb))
-* **[MainPage.xaml](./CS/MainPage.xaml) (VB: [MainPage.xaml](./VB/MainPage.xaml))**
-* [MainPage.xaml.cs](./CS/MainPage.xaml.cs) (VB: [MainPage.xaml.vb](./VB/MainPage.xaml.vb))
 * [MainWindow.xaml](./CS/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/MainWindow.xaml))
 * [MainWindow.xaml.cs](./CS/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/MainWindow.xaml.vb))
 * [ViewModel.cs](./CS/ViewModel.cs) (VB: [ViewModel.vb](./VB/ViewModel.vb))
