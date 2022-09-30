@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace HierarchicalDataBinding {
+namespace ChildNodesSelector {
 
     public partial class MainWindow : Window {
         public MainWindow() {
