@@ -3,22 +3,33 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E3298)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
+
+# WPF Tree List - Use the Child Nodes Selector to Create a Hierarchical Data Structure
+
+This example displays the hierarchical data structure that contains different object types. If all objects have the same field that contains child nodes, use the [Child Nodes Path](https://github.com/DevExpress-Examples/wpf-treelist-implement-childnodespath) technique.
+
+1. Create a selector class that implements the `DevExpress.Xpf.Grid.IChildNodesSelector` interface, and override the `SelectChildren` method that returns node children.
+2. Assign the selector class to the [TreeListView.ChildNodesSelector](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.TreeListView.ChildNodesSelector) property.
+3. Set the [TreeListView.TreeDerivationMode](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.TreeListView.TreeDerivationMode) property to `ChildNodesSelector`.
+
+![image](https://user-images.githubusercontent.com/65009440/193272998-7ef230be-d8e0-4b9e-aa94-dc95243e293c.png)
+
+## Files to Review
 
 * [ChildNodesSelector.cs](./CS/ChildNodesSelector.cs) (VB: [ChildNodesSelector.vb](./VB/ChildNodesSelector.vb))
-* [Data.cs](./CS/Data/Data.cs) (VB: [Data.vb](./VB/Data/Data.vb))
-* **[MainPage.xaml](./CS/MainPage.xaml) (VB: [MainPage.xaml](./VB/MainPage.xaml))**
-* [MainPage.xaml.cs](./CS/MainPage.xaml.cs) (VB: [MainPage.xaml.vb](./VB/MainPage.xaml.vb))
 * [MainWindow.xaml](./CS/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/MainWindow.xaml))
-* [MainWindow.xaml.cs](./CS/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/MainWindow.xaml.vb))
 * [ViewModel.cs](./CS/ViewModel.cs) (VB: [ViewModel.vb](./VB/ViewModel.vb))
-<!-- default file list end -->
-# How to implement hierarchical data binding via Child Nodes Selector
+* [Data.cs](./CS/DataModel.cs) (VB: [Data.vb](./VB/DataModel.vb))
 
+## Documentation
 
-<p>A hierarchical data structure is any set of nested business objects that have a structure where the children of a node are in a <i>childre</i><i>n</i> field. Parents and children can be different object types. When working with hierarchical data structures, the control's <strong>ItemsSource</strong> property contains only data items that correspond to root nodes. The TreeListView provides two approaches (tree derivation modes) allowing you to specify where a data object's child items come from. This can be done using Hierarchical Data Templates or in code-behind via a Child Nodes Selector.</p><p>This example shows how to build a tree in code-behind. The CustomChildrenSelector class implements DevExpress.Xpf.Grid.IChildNodeSelector and returns the list/collection of child nodes for the specified node. This selector is assigned to the TreeListView's <strong>ChildNodesSelector</strong> property. The TreeListView's <strong>TreeDerivationMode</strong> property should be set to <i>ChildNodesSelector</i>.</p>
+* [Child Nodes Selector](https://docs.devexpress.com/WPF/10366/controls-and-libraries/data-grid/display-hierarchical-data/bind-to-hierarchical-data-structure#child-nodes-selector)
+* [Display Hierarchical Data](https://docs.devexpress.com/WPF/9700/controls-and-libraries/data-grid/display-hierarchical-data)
+* [TreeListView.ChildNodesSelector](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.TreeListView.ChildNodesSelector)
 
-<br/>
+## More Examples
 
-
+* [WPF Tree List - Bind to Self-Referential Data Structure](https://github.com/DevExpress-Examples/wpf-treelist-bind-to-self-referential-data)
+* [WPF Tree List - Implement the Child Nodes Path](https://github.com/DevExpress-Examples/wpf-treelist-implement-childnodespath)
+* [WPF Tree List - Use the Hierarchical Data Template to Build a Tree](https://github.com/DevExpress-Examples/how-to-build-a-tree-via-hierarchicaldatatemplate-e3410)
+* [WPF Tree List - Manually Create a Tree](https://github.com/DevExpress-Examples/how-to-manually-create-a-tree-unbound-mode-e3128)
